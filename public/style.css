@@ -1,0 +1,32 @@
+body {
+  margin:0;
+  background-color: 0CB2A9;
+}
+
+
+#list {
+  /*width:100%;*/
+  padding:10px;
+  border: 2px solid FFDB37;
+  margin-left:40%;
+  margin-right:40%;
+}
+
+
+#form {
+  text-align: center;
+}
+
+
+#top-bar {
+  background-color: B20395;
+}
+
+#title {
+  color: #FFFFF0;
+  text-align:center;
+}
+
+div#list > ul {
+  text-align: center;
+  }

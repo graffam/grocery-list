@@ -2,15 +2,19 @@
 <html>
   <head>
     <link href="style.css" rel="stylesheet">
+    <title>Grocery List</title>
   </head>
   <body>
+    <div id="top-bar">
+      <h1 id="title">The Smart Grocery List</h1>
+    </div>
     <div>
-      <form action='/groceries' method='POST'>
+      <form action='/groceries' method='POST' id="form">
       <input type='Text' name='Item' size='10' placeholder='Name of Item' >
       <button type='submit'>Add Item</button>
       </form>
     </div>
-    <div>
+    <div id="list">
       <ul>
         <% @contents.each do |task| %>
           <li> <%= task %> </li>
