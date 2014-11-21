@@ -4,11 +4,19 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
-    <ul>
-      <% @contents.each do |task| %>
-        <li> <%= task %> </li>
-        <% end %>
-    </ul>
+    <div>
+      <form action='/groceries' method='POST'>
+      <input type='Text' name='Item' size='10' placeholder='Name of Item' >
+      <button type='submit'>Add Item</button>
+      </form>
+    </div>
+    <div>
+      <ul>
+        <% @contents.each do |task| %>
+          <li> <%= task %> </li>
+          <% end %>
+      </ul>
+    </div>
 
 
 
