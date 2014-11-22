@@ -1,0 +1,15 @@
+{
+  "name": "gas",
+  "homepage": "https://github.com/CardinalPath/gas",
+  "version": "1.11.0",
+  "_release": "1.11.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.11.0",
+    "commit": "765189727b9308d56ccb51185f991a8eed788778"
+  },
+  "_source": "git://github.com/CardinalPath/gas.git",
+  "_target": "~1.11.0",
+  "_originalSource": "gas",
+  "_direct": true
+}

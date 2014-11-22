@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Chivo' rel='stylesheet' type='text/css'>
     <title>Grocery List</title>
   </head>
   <body>
@@ -17,7 +18,10 @@
     <div id="list">
       <ul>
         <% @contents.each do |task| %>
-          <li> <%= task %> </li>
+            <li> <%= task %> </li>
+            <form action="/groceries/delete" method='POST'>
+              <button name="button" value="done">Done</button>
+            <form>
           <% end %>
       </ul>
     </div>

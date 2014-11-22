@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var _gas = _gas || [];
+        _gas.push(['_setDebug', true]);
+        _gas.push(['_setAccount', 'UA-YYYYYY-Y']);
+        _gas.push(['_trackPageview', '/test']);
+        _gas.push(['_addExternalDomainName', 'xternal.com']);
+        _gas.push(['_setMultiDomain', 'now']);
+        _gas.push(['_gasTrackOutboundLinks']);
+        _gas.push(['_gasTrackMailto']);
+
+        (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = '../dist/gas.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+    <ul>
+    <li><a href="/internal">Internal</a></li>
+    <li><a href="www.outdomain.com">Internal</a></li>
+    <li><a href="http://www.xternal.com/">External Link</a></li>
+    <li><a href="http://w">BLA</a></li>
+    <li><a href="https://as.com">BLE</a></li>
+    <li><a href="mailto:test@test.com">mail</a></li>
+    <li><a href="https://www.google.com"><img src="https://www.google.com/intl/en_com/images/srpr/logo3w.png" /></a></li>
+
+    </ul>
+</body>
+</html>
