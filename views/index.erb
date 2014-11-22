@@ -20,8 +20,8 @@
         <% @results.each do |task| %>
             <li> <%= task["item"] %> </li>
             <form action="/groceries/delete" method='POST'>
-              <button name="button" value="done">Done</button>
-            <form>
+              <button name="button" value="<%="#{task["item"]}"%>">Done</button>
+            </form>
           <% end %>
       </ul>
     </div>

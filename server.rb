@@ -23,11 +23,35 @@ def connect
 end
 
 def items
-  conn = connect
-  results = conn.exec('SELECT item FROM items').to_a
-
+  begin
+    conn = connect
+    results = conn.exec('SELECT item FROM items').to_a
+  ensure
+    conn.close
+  end
 end
 
+def add_item (item)
+    begin
+      conn = connect
+      item_added = item
+      query = "INSERT INTO items (item) VALUES('#{item_added}')"
+      conn.exec(query)
+    ensure
+      conn.close
+    end
+end
+
+def delete_item (item)
+  begin
+    conn = connect
+    item_delete = item
+    query = "DELETE FROM items WHERE item = '#{item_delete}'"
+    conn.exec(query)
+  ensure
+    conn.close
+  end
+end
 
 get '/groceries' do
   @results = items
@@ -35,10 +59,12 @@ get '/groceries' do
 end
 
 post '/groceries' do
-  write_to_file(params[:Item])
+  add_item(params[:Item])
   redirect '/groceries'
 end
 
-post '/grocies/delete' do
-binding.pry
+post '/groceries/delete' do
+  binding.pry
+  delete_item(params[:button])
+  redirect'/groceries'
 end
