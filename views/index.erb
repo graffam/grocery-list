@@ -17,8 +17,8 @@
     </div>
     <div id="list">
       <ul>
-        <% @contents.each do |task| %>
-            <li> <%= task %> </li>
+        <% @results.each do |task| %>
+            <li> <%= task["item"] %> </li>
             <form action="/groceries/delete" method='POST'>
               <button name="button" value="done">Done</button>
             <form>

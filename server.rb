@@ -23,19 +23,14 @@ def connect
 end
 
 def items
-  list = []
   conn = connect
-  conn.exec("SELECT * FROM items") do |result|
-    list << result
-  end
-  binding.pry
+  results = conn.exec('SELECT item FROM items').to_a
+
 end
 
 
 get '/groceries' do
-  # items
-  file = get_file
-  @contents = read_file(file)
+  @results = items
   erb :index
 end
 
